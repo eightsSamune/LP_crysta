@@ -7,14 +7,11 @@
 }
 
 body{
-    min-width: 1440px;
+    max-width: 1440px;
 
     // フォント指定
-    // font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'  
     font-family: Montserrat, "Noto Sans JP", sans-serif;
-
-    // p{font-family: "Noto Sans JP", "Montserrat Medium" 游ゴシック体,sans-serif;}
-    p,a{font-family: "Noto Sans JP", 游ゴシック体,sans-serif;}
+    p,a{font-family: "Noto Sans JP", 游ゴシック体, sans-serif;}
 
     text-align: center;
 
@@ -98,6 +95,7 @@ header{
     }
 }
 
+// ■FV
 .sec01{
     height: 740px;
     position: relative;
@@ -110,19 +108,21 @@ header{
         top: 0;
         right: 0;
         background-color: #222;
-        // width: 50%;
-        // height: 100%;
-        width: 780px;
-        height: 740px;
+        width: 50%;
+        height: 100%;
+        // width: 780px;
+        // height: 740px;
         z-index: -1;
     }
 
+    // FVメインイメージ
     .boxbackground {
         position: relative;
-        width: 1100px;
-        height: 640px;
+        width: 76%;
+        height: 87%;
         background-image: url("../images/kv-img.jpg");
         background-size: cover;
+        background-position: center;
         z-index: 1;
 
         // 画像を暗くする
@@ -139,8 +139,9 @@ header{
     
     .fv_text{
         position: absolute;
-        padding-top: 161px;
-        padding-left: 950px;
+
+        top: 161px;
+        right: -14%;
 
         text-align: left;
         color: rgba(255, 255, 255, 1);
@@ -156,16 +157,17 @@ header{
 }
 
 .sec02{
-    padding-top: 120px;
+    margin-top: 120px;
 
     .container{
-
         .about_boxImage {
             position: relative;
-            width: 1100px;
             height: 607px;
+            width: 100%;
+
             background-image: url("../images/aboutusImage.jpg");
             background-size: cover;
+            background-position: center;
 
             // 画像を暗くする
             &::before{
@@ -219,6 +221,7 @@ header{
 
             .imageBord{
                 text-align: left;
+                width: 520px;
 
                 h2{
                     line-height: 1.2;
@@ -230,7 +233,7 @@ header{
                     background-size: cover;
                     background-position: center;
                     
-                    width: 520px;
+                    width: 100%;
                     height: 350px;
                 }
                 
@@ -271,7 +274,6 @@ header{
 }
 
 .sec04{
-    
     .container{
         padding:60px 0;
         margin: 0 auto;
