@@ -21,18 +21,22 @@
       <img src="images/site-logo.png" alt="" class="headLogo">
 
       <!-- ハンバーガーメニュー -->
-      <div class="menu">
-        <ul>
-          <li class="menuBar">
-            <i class="fas fa-bars"></i>
-          </li>
-          <li>
-            <h4>MENU</h4>
-          </li>
-          
-        </ul>
-      </div>
+      <button class="menu" id="menu">
+        <h4><i class="menuBar fas fa-bars"></i>MENU</h4>
+      </button>
 
+      <!-- ナビゲーションメニュー -->
+      <nav class="nav_menu">
+        <img src="images/navLogo.png" alt="ロゴ">
+        <a href="#aboutus">ABOUT US</a>
+        <a href="#works">WORKS</a>
+        <a href="#culture">CULTURE</a>
+        <a href="#topics">TOPICS</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+
+      <!-- 背景マスク要素 -->
+      <span class="burger-musk"></span>
     </header>
 
     <!-- ■FV -->
@@ -51,7 +55,7 @@
     </section>
 
     <!-- ■About Us -->
-    <section class="sec02">
+    <section class="sec02" id="aboutus">
       <div class="container">
 
         <div class="about_boxImage">
@@ -75,14 +79,14 @@
 
         <div class="imageBords">
 
-          <div class="imageBord">
+          <div class="imageBord" id="works">
             <h2 class="subTitle">WORKS</h2>
             <div class="imageBox worksImage"></div>
             <p>DIGSMILEの制作実績を紹介します。</p>
             <a href="" class="readmoreBtn">READ MORE</a>
           </div>
           
-          <div class="imageBord">
+          <div class="imageBord" id="culture">
             <h2 class="subTitle">CULTURE</h2>
             <div class="imageBox cultureImage"></div>
             <p>DIGSMILEの社内文化について紹介します。</p>
@@ -95,7 +99,7 @@
     </section>
 
     <!-- ■LATEST TOPICS -->
-    <section class="sec04">
+    <section class="sec04" id="topics">
       <div class="container">
 
         <h2 class="subTitle">LATEST TOPICS</h2>
@@ -127,7 +131,7 @@
     </section>
 
     <!-- ■CONTACT -->
-    <section class="sec05 bgGray">
+    <section class="sec05 bgGray" id="contact">
       <div class="container">
 
         <div class="contact_wrapper">
@@ -157,26 +161,33 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-      // $(function(){
-      //   // メニュー上からスライド
-      //   $("#drawer_toggle").click(function(){
+      $(function(){
 
-      //     // ハンバーガーアイコン⇔バツアイコンの切り替え
-      //     if($(this).hasClass("fas fa-bars")){
-      //       $(this).removeClass("fas fa-bars");
-      //       $(this).toggleClass("fas fa-times");
+        // ハンバーガーメニューボタン押下イベント
+        $("#menu").click(function(){
+          var menuBar = $(this).find(".menuBar");
 
-      //     }else{
-      //       $(this).removeClass("fas fa-times");
-      //       $(this).toggleClass("fas fa-bars");
-            
-      //     }
+          // ハンバーガーアイコン⇔バツアイコンの切り替え
+          if(menuBar.hasClass("fa-bars")){
+            menuBar.removeClass("fa-bars");
+            menuBar.toggleClass("fa-times");
 
-      //     // 上からスライド
-      //     $("#global_nav").slideToggle();
-      //   });
-        
-      // });
+          }else{
+            menuBar.removeClass("fa-times");
+            menuBar.toggleClass("fa-bars");
+          }
+
+          //ナビゲーションが開くCSS適用
+          $('.nav_menu').toggleClass('open'); 
+
+          //ハンバーガーメニューを開いたときにスクロールしない
+          $('body').toggleClass('noscroll'); 
+
+          //ナビゲーション以外の背景をマスク
+          $('.burger-musk').fadeToggle(300); 
+          
+        });
+      });
 
       // リンクのスムーススクロール
       $(function(){

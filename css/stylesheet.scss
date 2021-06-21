@@ -13,6 +13,7 @@ body{
     // フォント指定
     font-family: Montserrat, "Noto Sans JP", sans-serif;
     p,a{font-family: "Noto Sans JP", 游ゴシック体, sans-serif;}
+    .nav_menu > a{font-family: Montserrat, "Noto Sans JP", sans-serif;}
 
     text-align: center;
 
@@ -50,6 +51,31 @@ body{
     //背景色グレー
     background-color: #F0F0F0;
 }
+
+// スクロールなし
+body.noscroll{
+    overflow: hidden;
+}
+
+// ナビゲーションオープン
+.nav_menu.open{
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform .3s,opacity .3s;
+}
+
+// ナビゲーション以外の背景をマスク
+.burger-musk{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0,0,.5);
+    z-index: 1;
+}
+
 //--------------------------------------------
 
 header{
@@ -68,7 +94,7 @@ header{
     display: flex;
     justify-content: space-between; 
 
-    img{
+    .headLogo{
         width: 260px;
         height: 28.2px;
 
@@ -77,21 +103,52 @@ header{
     }
 
     .menu{
+        z-index: 10;
         margin-right: 58px;
         font-weight: bold;
         
-        ul{
-            display: flex;
-
+        h4{
+            font-size: 10px;
             .menuBar{
                 margin-right: 7px;
             }
-
-            h4{
-                font-size: 10px;
-            }
         }
-        
+    }
+
+    // ナビゲーションメニュー
+    .nav_menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        z-index: 2;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform .3s,opacity .3s;
+
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 520px;
+        height: 100%;
+
+        padding-top: 180px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        margin: 0 auto;
+
+        img{
+            width: 42px;
+            height: auto;
+        }
+        a{
+            line-height: 55px;
+            font-size: 20px;
+
+            letter-spacing: 1.3px;
+        }
     }
 }
 
