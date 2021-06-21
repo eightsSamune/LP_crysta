@@ -1,4 +1,7 @@
 //PC用表示フラグ
+.tb_only{
+    display: none;
+}
 .sp_only{
     display: none;
 }
@@ -7,8 +10,6 @@
 }
 
 body{
-    max-width: 1440px;
-
     // フォント指定
     font-family: Montserrat, "Noto Sans JP", sans-serif;
     p,a{font-family: "Noto Sans JP", 游ゴシック体, sans-serif;}
@@ -18,7 +19,6 @@ body{
     .container{
         max-width: 1100px;
         margin: 0 auto;
-        padding: 0;
     }
 
     // 文字色
@@ -110,8 +110,6 @@ header{
         background-color: #222;
         width: 50%;
         height: 100%;
-        // width: 780px;
-        // height: 740px;
         z-index: -1;
     }
 
@@ -156,6 +154,7 @@ header{
     }
 }
 
+// ■about us
 .sec02{
     margin-top: 120px;
 
@@ -188,7 +187,7 @@ header{
             
             padding: 50px 30px;
     
-            height: 387px;
+            height: 63%;
             width: 590px;
     
             text-align: left;
@@ -209,6 +208,7 @@ header{
     }
 }
 
+// ■WORKS
 .sec03{
     padding-top: 80px;
     padding-bottom: 60px;
@@ -273,6 +273,7 @@ header{
     }
 }
 
+// ■LATEST TOPICS
 .sec04{
     .container{
         padding:60px 0;
@@ -308,6 +309,7 @@ header{
     }
 }
 
+// ■CONTACT
 .sec05{
     .container{
         padding: 60px 0 120px;
@@ -337,8 +339,10 @@ header{
             .contactImage{
                 position: relative;
 
-                min-width: 580px;
-                height: 390px;
+                width: 93%;
+                // height: 390px;
+                padding-top:35%;
+                
                 background-image: url("../images/contactImage.jpg");
                 background-size: cover;
                 background-position: top;

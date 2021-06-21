@@ -1,4 +1,125 @@
 @media (max-width: 768px) {
+  .tb_only {
+    display: block;
+  }
+  .sp_only {
+    display: none;
+  }
+  .pc_only {
+    display: none;
+  }
+  header img {
+    width: 189px;
+    height: 20.6px;
+    margin-top: 33px;
+    margin-left: 30px;
+  }
+  .sec01 {
+    height: 1024px;
+  }
+  .sec01::before {
+    width: 73%;
+  }
+  .sec01 .boxbackground {
+    width: 78%;
+  }
+  .sec01 .fv_text {
+    top: 330px;
+    right: -14%;
+    font-size: 16px;
+  }
+  .sec01 .fv_text h1 {
+    font-size: 56px;
+  }
+  .sec02 .container .about_boxImage {
+    height: 479px;
+    width: 100%;
+  }
+  .sec02 .container .aboutText_wrapper {
+    top: auto;
+    left: auto;
+    margin: 7% 10%;
+    padding: auto;
+    height: 74%;
+    width: 80%;
+  }
+  .sec02 .container .aboutText_wrapper h2 {
+    padding-bottom: 25px;
+  }
+  .sec02 .container .aboutText_wrapper p {
+    line-height: 2;
+    font-size: 16px;
+  }
+  .sec02 .container .aboutText_wrapper .readmoreBtn {
+    margin: 25px 0;
+  }
+  .sec03 {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  .sec03 .container .imageBords {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sec03 .container .imageBords .imageBord {
+    margin: 0 10%;
+    width: 80%;
+  }
+  .sec03 .container .imageBords .imageBord .imageBox {
+    height: 350px;
+  }
+  .sec03 .container .imageBords .imageBord .readmoreBtn {
+    margin: 0;
+  }
+  .sec03 .container .imageBords .imageBord + .imageBord {
+    margin-left: 10%;
+    margin-top: 80px;
+  }
+  .sec03::before {
+    height: 100%;
+  }
+  .sec04 .container {
+    padding: 40px 0;
+    margin: 0 10%;
+  }
+  .sec04 .container .topicsList {
+    margin-left: 0;
+  }
+  .sec04 .container .positionRight {
+    text-align: left;
+  }
+  .sec05 .container {
+    padding: 40px 10% 80px;
+  }
+  .sec05 .container .contact_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .sec05 .container .contact_wrapper .contactText_wrapper {
+    margin-top: 30px;
+    margin-right: 80px;
+    text-align: left;
+  }
+  .sec05 .container .contact_wrapper .contactText_wrapper .subTitle {
+    margin-bottom: 30px;
+  }
+  .sec05 .container .contact_wrapper .contactText_wrapper p {
+    line-height: 2;
+  }
+  .sec05 .container .contact_wrapper .contactText_wrapper .readmoreBtn {
+    margin-top: 30px;
+  }
+  .sec05 .container .contact_wrapper .contactImage {
+    width: 84%;
+    height: 390px;
+  }
+}
+
+@media (max-width: 375px) {
   .sp_only {
     display: block;
   }
