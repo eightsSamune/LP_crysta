@@ -21,6 +21,7 @@
         }
     }
 
+    // ■FV
     .sec01{
         height: 1024px;
 
@@ -44,7 +45,6 @@
             }
         }
     }
-
 
     // ■about us
     .sec02{
@@ -80,6 +80,7 @@
         }
     }
 
+    // ■WORKS
     .sec03{
         padding-top: 80px;
         padding-bottom: 60px;
@@ -114,6 +115,7 @@
         }
     }
 
+    // ■LATEST TOPICS
     .sec04{
         .container{
             padding:40px 0;
@@ -130,6 +132,7 @@
         }
     }
 
+    // ■CONTACT
     .sec05{
         .container{
             padding: 40px 10% 80px;
@@ -169,6 +172,9 @@
 @media (max-width:375px){
 
     // スマホ用表示フラグ
+    .tb_only{
+        display: none;
+    }
     .sp_only{
         display: block;
     }
@@ -176,23 +182,184 @@
         display: none;
     }
 
-    body{
-        h1{
-            font-size: 110px;
-        }
-        h2{
-            font-size: 35px;
-        }
-        h3{
-            font-size: 20px;
-        }
-        p{
-            font-size: 10px;
-        }
+
+    //--------------------------------------------
+    // h2 サブタイトル
+    .subTitle{
+        font-size: 28px;
+        letter-spacing: 2.2px;
+    }
+
+    // READ MOREボタン
+    .readmoreBtn{
+        // display: inline-block;
+        
+        width: 160px;
+        height: 36px;
+        line-height: 36px;
+        // text-align: center;
+        
+        // background: rgba(0, 0, 0, 1);
+        
+        // color: rgba(255, 255, 255, 1);
+        font-size: 12px;
+    }
+    //--------------------------------------------
+
+
+    header{   
+        line-height: 60px;
+        height: 60px;
+        img{
+            width: 189px;
+            height: 20.6px;
     
+            margin-top: 19.8px;
+            margin-left: 15px;
+        }
+        .menu{
+            margin-right: 15px;
+        }
+    }
+
+
+    .sec01{
+        height: 667px;
+
+        // 背景黒
+        &::before{
+            width: 73%;
+        }
+
+        // FVメインイメージ
+        .boxbackground {
+            width: 75%;
+            height: 87%;
+        }
+        .fv_text{
+            top: 178px;
+            right: -21%;
+    
+            font-size: 16px;
+    
+            h1{
+                font-size: 56px;
+            }
+        }
+    }
+
+    // ■about us
+    .sec02{
+        margin-top: 78px;
+
         .container{
-            max-width: 740px;
-            min-width: 340px;
+            .about_boxImage {
+                height: 541px;
+                width: 100%;
+            }
+            
+            .aboutText_wrapper{
+                // top: auto;
+                // left: auto;
+                margin: 13% 3%;
+                
+                padding: 50px 15px 50px 30px;
+
+                height: auto;
+                width: 94%;
+
+                h2{
+                    padding-bottom: 25px;
+                }
+                p{
+                    // line-height: 2;
+                    font-size: 14px;
+                }
+                
+                .readmoreBtn{
+                    margin: 0;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+
+    // ■WORKS
+    .sec03{
+        padding-top: 40px;
+        padding-bottom: 0;
+
+        .container{
+            .imageBords{
+                .imageBord{
+                    padding-bottom: 40px;
+
+                    margin: 0 3%;
+                    width: 94%;
+
+                    .imageBox{
+                        // height: 350px;
+                        height: 0;
+                        padding-top: 65%;
+                    }
+
+                    .readmoreBtn{
+                        margin: 0;
+                    }
+                }
+
+                .imageBord + .imageBord{
+                    margin-left: 3%;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    // ■LATEST TOPICS
+    .sec04{
+        .container{
+            margin: 0 3%;
+
+            .topicsList{
+                margin-top: 32px;
+
+                .topics{
+                    margin-top: 0;
+                    margin-bottom: 24px;
+
+                    p{
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .positionRight{
+                .readmoreBtn{
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+
+    // ■CONTACT
+    .sec05{
+        .container{
+            padding: 40px 3% 40px;
+
+            .contact_wrapper{
+                .contactText_wrapper{
+                    // margin-top: 30px;
+                    margin-right: 0;
+                }
+
+                .contactImage{
+                    width: 100%;
+                    // height: 390px;
+                    height: 0;
+                    padding-top: 67%;
+                }
+            }
         }
     }
 
