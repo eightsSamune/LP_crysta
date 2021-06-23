@@ -1,18 +1,8 @@
-//PC用表示フラグ
-.tb_only{
-    display: none;
-}
-.sp_only{
-    display: none;
-}
-.pc_only{
-    display: block;
-}
 
 body{
     // フォント指定
     font-family: Montserrat, "Noto Sans JP", sans-serif;
-    p,a{font-family: "Noto Sans JP", 游ゴシック体, sans-serif;}
+    p,a,td{font-family: "Noto Sans JP", 游ゴシック体, sans-serif;}
     .nav_menu > a{font-family: Montserrat, "Noto Sans JP", sans-serif;}
 
     text-align: center;
@@ -20,6 +10,8 @@ body{
     .container{
         max-width: 1100px;
         margin: 0 auto;
+        // max-width: 76%;
+        // padding: 0 12%;
     }
 
     // 文字色
@@ -27,6 +19,8 @@ body{
 }
 
 //--------------------------------------------
+// ■共通設定
+
 // h2 サブタイトル
 .subTitle{
     font-size: 32px;
@@ -128,7 +122,8 @@ header{
 
         background-color: rgba(0, 0, 0, 0.7);
         width: 520px;
-        height: 100%;
+        // height: 100%;
+        height: 100vh;
 
         padding-top: 180px;
 
@@ -151,6 +146,10 @@ header{
         }
     }
 }
+
+// ================================================================
+// MAIN
+// ================================================================
 
 // ■FV
 .sec01{
@@ -216,6 +215,9 @@ header{
     margin-top: 120px;
 
     .container{
+        padding-left: 0;
+        padding-right: 0;
+
         .about_boxImage {
             position: relative;
             height: 607px;
@@ -244,7 +246,7 @@ header{
             
             padding: 50px 30px;
     
-            height: 63%;
+            // height: 63%;
             width: 590px;
     
             text-align: left;
@@ -332,8 +334,8 @@ header{
 
 // ■LATEST TOPICS
 .sec04{
+    padding:60px 0;
     .container{
-        padding:60px 0;
         margin: 0 auto;
 
         text-align: left;
@@ -368,8 +370,8 @@ header{
 
 // ■CONTACT
 .sec05{
+    padding: 60px 0 120px;
     .container{
-        padding: 60px 0 120px;
 
         .contact_wrapper{
             display: flex;
@@ -428,3 +430,160 @@ footer{
 
     font-size: 10px;
 }
+
+// ================================================================
+// ABOUT US
+// ================================================================
+// ■FV
+.about_sec01{
+    height: 464px;
+    position: relative;
+
+    // 背景黒
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #222;
+        width: 54%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    // FVメインイメージ
+    .boxbackground {
+        position: relative;
+        width: 76%;
+        height: 87%;
+        background-image: url("../images/heading-img.jpg");
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+    
+    .fv_text{
+        position: absolute;
+
+        top: 161px;
+        right: -14%;
+
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        font-size: 20px;
+        font-weight: bold;
+
+        z-index: 1;
+
+        h1{
+            font-size: 72px;
+        }
+    }
+}
+
+// ■VISION
+.about_sec02{
+    .container{
+        padding:120px 0 120px 140px;
+
+        text-align: left;
+
+        .subTitle{
+            margin-bottom: 30px;
+        }
+        h3{
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 0.024em;
+            
+            margin-bottom: 30px;
+        }
+        p + p{
+            margin-top: 44px;
+        }
+    }
+}
+
+// ■CEO_MESSAGE
+.about_sec03{
+    margin-bottom: 120px;
+
+    .container{
+        .messageImg{
+            position: relative;
+            height: 144px;
+
+            &::before{
+                content: "";
+                background-image: url(../images/ceo-img.jpg);
+                background-position: center;
+                background-size: cover;
+                width: 38%;
+                // height: 283px;
+                padding-top: 25%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+
+        .ceoMessageText_wrapper{
+            text-align: left;
+
+            padding: 120px 17% 90px;
+            margin-left: 30%;
+            width: 70%;
+
+            .subTitle{
+                margin-bottom: 30px;
+            }
+            p{
+                line-height: 2;
+            }
+            p + p{
+                margin-top: 44px;
+            }
+        }
+    }
+}
+
+// ■COMPANY
+.about_sec04{
+    margin-bottom: 120px;
+
+    .container{
+        text-align: left;
+
+        .subTitle{
+            padding-bottom: 30px;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .companyDetails{
+            // margin-left: 300px;
+            margin-left: 37%;
+            margin-bottom: 40px;
+
+            table{
+                width: 100%;
+                tr{
+                    th{
+                        width: 144px;
+                    }
+                    height: 56px;
+                    line-height: 56px;
+                    
+                    border-bottom: 1px solid #DDDDDD;
+                }
+            }
+        }
+
+        iframe{
+            height: 360px;
+        }
+    }
+}
+
+// ----------------------------------------------------------------

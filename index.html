@@ -5,12 +5,11 @@
     <meta name="description" content="">
     <meta name="author" content="エイトデザイン">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>クリスタLP_エイトコーディング</title>
+    <title>クリスタLP_byエイトコーディング</title>
     <link rel="stylesheet" href="css/destyle.css">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <script src="js/jquery-3.6.0.min.js"></script>
   </head>
 
   <body>
@@ -65,7 +64,7 @@
             <p>DIGSMILEは、デザインで人を笑顔にする会社。<br>
               なんでもない日常に少しのワクワクと遊び心を提供します。笑顔には世界を変える力がある、デザインには人を幸せにする力がある。毎日に幸せを感じて生きていきたい。<br>
               DIGSMILEの社名にはそんな想いが込められています。</p>
-            <a href="" class="readmoreBtn">READ MORE</a>
+            <a href="/about/index.html" class="readmoreBtn">READ MORE</a>
           </div>
   
         </div>
@@ -160,49 +159,6 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-      $(function(){
-
-        // ハンバーガーメニューボタン押下イベント
-        $("#menu").click(function(){
-          var menuBar = $(this).find(".menuBar");
-
-          // ハンバーガーアイコン⇔バツアイコンの切り替え
-          if(menuBar.hasClass("fa-bars")){
-            menuBar.removeClass("fa-bars");
-            menuBar.toggleClass("fa-times");
-
-          }else{
-            menuBar.removeClass("fa-times");
-            menuBar.toggleClass("fa-bars");
-          }
-
-          //ナビゲーションが開くCSS適用
-          $('.nav_menu').toggleClass('open'); 
-
-          //ハンバーガーメニューを開いたときにスクロールしない
-          $('body').toggleClass('noscroll'); 
-
-          //ナビゲーション以外の背景をマスク
-          $('.burger-musk').fadeToggle(300); 
-          
-        });
-      });
-
-      // リンクのスムーススクロール
-      $(function(){
-        // #で始まるリンクをクリックしたら実行されます
-        $('a[href^="#"]').click(function() {
-          // スクロールの速度
-          let speed = 400; // ミリ秒で記述
-          let href= $(this).attr("href");
-          let target = $(href == "#" || href == "" ? 'html' : href);
-          let position = target.offset().top;
-          $('body,html').animate({scrollTop:position}, speed, 'swing');
-          return false;
-        });
-      });
-    </script>
     <script src="js/script.js"></script>
 
   </body>

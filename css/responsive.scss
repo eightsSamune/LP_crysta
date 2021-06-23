@@ -1,15 +1,13 @@
+// PC版で1100px以下になった時の両側の余白
+@media (max-width:1100px) and (min-width:767px){
+    .container{
+        max-width: 90%;
+        padding: 0 5%;
+    }
+}
 
 // タブレット 
 @media (max-width: 768px) {
-    .tb_only{
-        display: block;
-    }
-    .sp_only{
-        display: none;
-    }
-    .pc_only{
-        display: none;
-    }
 
     header{
         .headLogo{
@@ -18,6 +16,10 @@
     
             margin-top: 33px;
             margin-left: 30px;
+        }
+
+        .nav_menu{
+            width: 70vw;
         }
     }
 
@@ -50,7 +52,7 @@
     .sec02{
         .container{
             .about_boxImage {
-                height: 479px;
+                // height: 479px;
                 width: 100%;
             }
             
@@ -62,7 +64,7 @@
                 padding: auto;
         
                 // min-height: 359px;
-                height: 74%;
+                // min-height: 74%;
                 width: 80%;
         
                 h2{
@@ -117,8 +119,8 @@
 
     // ■LATEST TOPICS
     .sec04{
+        padding:40px 0;
         .container{
-            padding:40px 0;
             margin: 0 10%;
 
             .topicsList{
@@ -134,8 +136,8 @@
 
     // ■CONTACT
     .sec05{
+        padding: 40px 0 80px;
         .container{
-            padding: 40px 10% 80px;
 
             .contact_wrapper{
                 flex-direction: column-reverse;
@@ -166,22 +168,104 @@
         }
     }
 
+    // ================================================================
+    // ABOUT US
+    // ================================================================
+    // ■FV
+    .about_sec01{
+        height: 615px;
+        
+        .fv_text{
+            top: 220px;
+            // right: -14%;
+
+            h1{
+                font-size: 52px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+
+    // ■VISION
+    .about_sec02{
+        .container{
+            padding:80px 0 80px 150px;
+
+            h3{
+                font-size: 24px;
+                font-weight: normal;
+            }
+            p{
+                font-size: 14px;
+            }
+            p + p{
+                margin-top: 30px;
+            }
+        }
+    }
+
+    // ■CEO_MESSAGE
+    .about_sec03{
+        margin-bottom: 80px;
+
+        .container{
+            padding: 0 4%;
+
+            .messageImg{
+                position: relative;
+                height: 131px;
+
+                &::before{
+                    width: 46%;
+                    padding-top: 31%;
+                    // padding-top: 216px; ★高さ固定でいいかも？
+                }
+            }
+
+            .ceoMessageText_wrapper{
+                padding: 110px 6% 90px;
+
+                .subTitle{
+                    margin-bottom: 30px;
+                }
+                p{
+                    line-height: 1.7;
+                }
+                p + p{
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    // ■COMPANY
+    .about_sec04{
+        margin-bottom: 80px;
+
+        .container{
+            padding: 0 4%;
+            .companyDetails{
+                table{
+                    tr{
+                        th{
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+
+            iframe{
+                height: 230px;
+            }
+        }
+    }
+
 }
 
 // ■スマホ用サイズ
 @media (max-width:375px){
-
-    // スマホ用表示フラグ
-    .tb_only{
-        display: none;
-    }
-    .sp_only{
-        display: block;
-    }
-    .pc_only{
-        display: none;
-    }
-
 
     //--------------------------------------------
     // h2 サブタイトル
@@ -192,20 +276,13 @@
 
     // READ MOREボタン
     .readmoreBtn{
-        // display: inline-block;
-        
         width: 160px;
         height: 36px;
         line-height: 36px;
-        // text-align: center;
-        
-        // background: rgba(0, 0, 0, 1);
-        
-        // color: rgba(255, 255, 255, 1);
+
         font-size: 12px;
     }
     //--------------------------------------------
-
 
     header{   
         line-height: 60px;
@@ -219,6 +296,9 @@
         }
         .menu{
             margin-right: 15px;
+        }
+        .nav_menu{
+            width: 100vw;
         }
     }
 
@@ -363,5 +443,69 @@
         }
     }
 
+    // ================================================================
+    // ABOUT US
+    // ================================================================
+    // ■FV
+    .about_sec01{
+        height: 449px;
+        
+        .fv_text{
+            top: 149px;
+            right: -19%;
+        }
+    }
+
+    // ■VISION
+    .about_sec02{
+        .container{
+            padding:80px 4% 80px;
+        }
+    }
+
+    // ■CEO_MESSAGE
+    .about_sec03{
+        margin-bottom: 80px;
+
+        .container{
+            padding: 0 4%;
+
+            .messageImg{
+                height: 131px;
+
+                &::before{
+                    width: 100%;
+                    padding-top: 71%;
+                    left: -4%;
+                }
+            }
+
+            .ceoMessageText_wrapper{
+                padding: 126px 6% 80px;
+                margin-left: auto;
+                width: auto;
+
+                .subTitle{
+                    margin-bottom: 30px;
+                }
+                p + p{
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    // ■COMPANY
+    .about_sec04{
+        .container{
+            .companyDetails{
+                margin-left: auto;
+            }
+
+            iframe{
+                height: 470px;
+            }
+        }
+    }
 
 }
