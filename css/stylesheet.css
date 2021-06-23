@@ -109,10 +109,6 @@ header .nav_menu {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   opacity: 0;
-  -webkit-transition: opacity .3s,-webkit-transform .3s;
-  transition: opacity .3s,-webkit-transform .3s;
-  transition: transform .3s,opacity .3s;
-  transition: transform .3s,opacity .3s,-webkit-transform .3s;
   background-color: rgba(0, 0, 0, 0.7);
   width: 520px;
   height: 100vh;

@@ -118,7 +118,7 @@ header{
         z-index: 2;
         transform: translateX(100%);
         opacity: 0;
-        transition: transform .3s,opacity .3s;
+        // transition: transform .3s,opacity .3s; 閉じる時のフェードアウトを一旦なしに変更
 
         background-color: rgba(0, 0, 0, 0.7);
         width: 520px;
