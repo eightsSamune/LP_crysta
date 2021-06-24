@@ -5,12 +5,16 @@ body {
   color: #333333;
 }
 
-body p, body a, body td {
+body p, body a, body td, body textarea, body .textBox, body label {
   font-family: "Noto Sans JP", 游ゴシック体, sans-serif;
 }
 
 body .nav_menu > a {
   font-family: Montserrat, "Noto Sans JP", sans-serif;
+}
+
+body .Montserrat {
+  font-family: Montserrat;
 }
 
 body .container {
@@ -396,12 +400,12 @@ footer {
   font-size: 10px;
 }
 
-.about_sec01 {
+.subPageFv {
   height: 464px;
   position: relative;
 }
 
-.about_sec01::before {
+.subPageFv::before {
   content: "";
   display: block;
   position: absolute;
@@ -413,17 +417,16 @@ footer {
   z-index: -1;
 }
 
-.about_sec01 .boxbackground {
+.subPageFv .boxbackground {
   position: relative;
   width: 76%;
   height: 87%;
-  background-image: url("../images/heading-img.jpg");
   background-size: cover;
   background-position: center;
   z-index: 1;
 }
 
-.about_sec01 .fv_text {
+.subPageFv .fv_text {
   position: absolute;
   top: 161px;
   right: -14%;
@@ -434,8 +437,12 @@ footer {
   z-index: 1;
 }
 
-.about_sec01 .fv_text h1 {
+.subPageFv .fv_text h1 {
   font-size: 72px;
+}
+
+.about_sec01 .boxbackground {
+  background-image: url("../images/heading-img.jpg");
 }
 
 .about_sec02 .container {
@@ -533,5 +540,104 @@ footer {
 
 .about_sec04 .container iframe {
   height: 360px;
+}
+
+.contact_sec01 .boxbackground {
+  background-image: url("../images/heading-img_contact.jpg");
+}
+
+.contact_sec02 .container {
+  padding: 120px 0;
+  width: 700px;
+  max-width: none;
+  text-align: left;
+}
+
+.contact_sec02 .container p {
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.contact_sec02 .container .formTitle {
+  margin-bottom: 8px;
+}
+
+.contact_sec02 .container .formDetail {
+  margin-bottom: 55px;
+}
+
+.contact_sec02 .container .flexRadio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+}
+
+.contact_sec02 .container .flexRadio label {
+  width: 110px;
+}
+
+.contact_sec02 .container .flexRadio input {
+  margin: 0 5px;
+}
+
+.contact_sec02 .container .textBox {
+  border: 1px solid #333333;
+  width: 100%;
+  height: 41px;
+  padding: 10px;
+}
+
+.contact_sec02 .container .next_margin {
+  margin-bottom: 40px;
+}
+
+.contact_sec02 .container textarea {
+  border: 1px solid #333333;
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.contact_sec02 .container #tArea_contactDetail {
+  height: 212px;
+}
+
+.contact_sec02 .container #tArea_praibacyPolicy {
+  height: 242px;
+}
+
+.contact_sec02 .container .socialCB {
+  width: 1em;
+  height: 1em;
+  margin-right: 6px;
+}
+
+.contact_sec02 .container .submitBtn {
+  background-color: #333333;
+  color: #fff;
+  width: 160px;
+  height: 36px;
+  letter-spacing: 0.04em;
+}
+
+.importantIcon {
+  position: relative;
+}
+
+.importantIcon::after {
+  content: "必須";
+  background-color: #333333;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 5px;
+  padding: 3px 5px;
+  position: absolute;
+  top: -1px;
+}
+
+.positionCenter {
+  text-align: center;
 }
 /*# sourceMappingURL=stylesheet.css.map */

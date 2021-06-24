@@ -172,7 +172,7 @@
     // ABOUT US
     // ================================================================
     // ■FV
-    .about_sec01{
+    .subPageFv{
         height: 615px;
         
         .fv_text{
@@ -262,9 +262,23 @@
         }
     }
 
+    // ================================================================
+    // CONTACT
+    // ================================================================
+    .contact_sec02{
+        .container{
+            padding: 135px 5% 197px;
+            width: 90%;
+
+            .formDetail{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
 }
 
-// ■スマホ用サイズ
+// ■スマホ用サイズ=======================================================================================
 @media (max-width:375px){
 
     //--------------------------------------------
@@ -447,7 +461,7 @@
     // ABOUT US
     // ================================================================
     // ■FV
-    .about_sec01{
+    .subPageFv{
         height: 449px;
         
         .fv_text{
@@ -504,6 +518,51 @@
 
             iframe{
                 height: 470px;
+            }
+        }
+    }
+
+     // ================================================================
+    // CONTACT
+    // ================================================================
+    // ■FV
+    .contact_sec01{
+        height: 365px;
+
+        // FVメインイメージ
+        .boxbackground {
+            height: 270px;
+            background-image: url(../images/fv_image_contact_sp.jpg);
+
+            .fv_text{
+                p{
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .contact_sec02{
+        .container{
+            padding: 80px 3% ;
+            width: 94%;
+
+            .formDetail{
+                margin-bottom: 20px;
+            }
+
+            .flexRadio{
+                flex-direction: column;
+
+                label{
+                    // height: 30px;
+                    margin-top: 15px;
+                }
+            }
+
+            .textBox{
+                height: 48px;
+                font-size: 20px;
             }
         }
     }

@@ -2,8 +2,10 @@
 body{
     // フォント指定
     font-family: Montserrat, "Noto Sans JP", sans-serif;
-    p,a,td{font-family: "Noto Sans JP", 游ゴシック体, sans-serif;}
+    p,a,td,textarea,.textBox,label{font-family: "Noto Sans JP", 游ゴシック体, sans-serif;}
     .nav_menu > a{font-family: Montserrat, "Noto Sans JP", sans-serif;}
+    .Montserrat{font-family: Montserrat}
+
 
     text-align: center;
 
@@ -435,10 +437,10 @@ footer{
 // ABOUT US
 // ================================================================
 // ■FV
-.about_sec01{
+.subPageFv{
     height: 464px;
     position: relative;
-
+    
     // 背景黒
     &::before{
         content: "";
@@ -451,13 +453,12 @@ footer{
         height: 100%;
         z-index: -1;
     }
-
+    
     // FVメインイメージ
     .boxbackground {
         position: relative;
         width: 76%;
         height: 87%;
-        background-image: url("../images/heading-img.jpg");
         background-size: cover;
         background-position: center;
         z-index: 1;
@@ -465,20 +466,26 @@ footer{
     
     .fv_text{
         position: absolute;
-
+        
         top: 161px;
         right: -14%;
-
+        
         text-align: left;
         color: rgba(255, 255, 255, 1);
         font-size: 20px;
         font-weight: bold;
-
+        
         z-index: 1;
-
+        
         h1{
             font-size: 72px;
         }
+    }
+}
+.about_sec01{
+    // FVメインイメージ
+    .boxbackground {
+        background-image: url("../images/heading-img.jpg");
     }
 }
 
@@ -586,4 +593,115 @@ footer{
     }
 }
 
+// ================================================================
+// CONTACT
+// ================================================================
+// ■FV
+.contact_sec01{
+    // FVメインイメージ
+    .boxbackground {
+        background-image: url("../images/heading-img_contact.jpg");
+    }
+}
+
+.contact_sec02{
+    .container{
+        padding: 120px 0;
+        width: 700px;
+
+        max-width: none;
+
+        text-align: left;
+
+        p{
+            letter-spacing: 0.04em;
+            line-height: 1.5;
+        }
+
+        .formTitle{
+            margin-bottom: 8px;
+        }
+
+        .formDetail{
+            margin-bottom: 55px;
+        }
+        .flexRadio{
+            display: flex;
+
+            padding: 8px;
+
+            label{
+                width: 110px;
+            }
+            input{
+                margin: 0 5px;
+            }
+        }
+
+        .textBox{
+            border: 1px solid #333333;
+            width: 100%;
+            height: 41px;
+            padding: 10px;
+        }
+        
+        .next_margin{
+            margin-bottom: 40px;
+        }
+        
+        textarea{
+            border: 1px solid #333333;
+            width: 100%;
+            padding: 10px;
+
+            letter-spacing: 0.04em;
+            line-height: 1.5;
+        }
+
+        #tArea_contactDetail{
+            height: 212px;
+        }
+        #tArea_praibacyPolicy{
+            height: 242px;
+        }
+        
+        .socialCB{
+            width: 1em;
+            height: 1em;
+            margin-right: 6px;
+        }
+
+        .submitBtn{
+            background-color: #333333;
+            color: #fff;
+            width: 160px;
+            height: 36px;
+            // line-height: 1em;
+            // padding: 10px;
+
+            letter-spacing: 0.04em;
+            // line-height: 1.5;
+        }
+
+    }
+}
+
+// 必須アイコン
+.importantIcon{
+    position: relative;
+    &::after{
+        content: "必須";
+        background-color: #333333;
+        color: #fff;
+        font-size: 12px;
+        margin-left: 5px;
+        padding: 3px 5px;
+
+        position: absolute;
+        top: -1px;
+    }
+}
+.positionCenter{
+    text-align: center;
+}
 // ----------------------------------------------------------------
