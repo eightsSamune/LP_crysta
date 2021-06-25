@@ -1,16 +1,16 @@
 @charset "UTF-8";
 body {
-  font-family: Montserrat, "Noto Sans JP", sans-serif;
+  font-family: Montserrat, "Noto Sans", sans-serif;
   text-align: center;
   color: #333333;
 }
 
 body p, body a, body td, body textarea, body .textBox, body label {
-  font-family: "Noto Sans JP", 游ゴシック体, sans-serif;
+  font-family: "Noto Sans", 游ゴシック体, sans-serif;
 }
 
 body .nav_menu > a {
-  font-family: Montserrat, "Noto Sans JP", sans-serif;
+  font-family: Montserrat, "Noto Sans", sans-serif;
 }
 
 body .Montserrat {
@@ -36,6 +36,40 @@ body .container {
   background: black;
   color: white;
   font-size: 12px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.readmoreBtn:hover {
+  color: #333;
+}
+
+.readmoreBtn::after {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+}
+
+.readmoreBtn:hover::after {
+  left: 0;
+  background-color: #fff;
+}
+
+.readmoreBtn::before, .readmoreBtn::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+
+.readmoreBtn, .readmoreBtn::before, .readmoreBtn::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .bgGray {

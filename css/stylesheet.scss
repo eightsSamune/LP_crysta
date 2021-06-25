@@ -1,11 +1,14 @@
 
 body{
     // フォント指定
-    font-family: Montserrat, "Noto Sans JP", sans-serif;
-    p,a,td,textarea,.textBox,label{font-family: "Noto Sans JP", 游ゴシック体, sans-serif;}
-    .nav_menu > a{font-family: Montserrat, "Noto Sans JP", sans-serif;}
+    font-family: Montserrat, "Noto Sans", sans-serif;
+    p,a,td,textarea,.textBox,label{font-family: "Noto Sans", 游ゴシック体, sans-serif;}
+    .nav_menu > a{font-family: Montserrat, "Noto Sans", sans-serif;}
     .Montserrat{font-family: Montserrat}
 
+    // ■googleFonts
+    // font-family: 'Montserrat', sans-serif;
+    // font-family: 'Noto Sans', sans-serif;
 
     text-align: center;
 
@@ -42,7 +45,47 @@ body{
 
     color: rgba(255, 255, 255, 1);
     font-size: 12px;
+
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    
+    border: 1px solid #333;
+
+    // ホバーアニメーション
+    &:hover {
+        color: #333;
+    }
+    &::after {
+        // top: -100%;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+    }
+    &:hover::after {
+        left: 0;
+        background-color: #fff;
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        content: '';
+    }
+    &,
+    &::before,
+    &::after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
 }
+
 .bgGray{
     //背景色グレー
     background-color: #F0F0F0;
@@ -704,4 +747,5 @@ footer{
 .positionCenter{
     text-align: center;
 }
+
 // ----------------------------------------------------------------
