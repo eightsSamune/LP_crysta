@@ -29,6 +29,7 @@ body{
 // h2 サブタイトル
 .subTitle{
     font-size: 32px;
+    font-weight: bold;
     letter-spacing: 2.2px;
 }
 
@@ -186,6 +187,7 @@ header{
         a{
             line-height: 55px;
             font-size: 20px;
+            font-weight: bold;
 
             letter-spacing: 1.3px;
         }
@@ -251,6 +253,7 @@ header{
 
         h1{
             font-size: 72px;
+            font-weight: 800;
         }
     }
 }
@@ -522,6 +525,7 @@ footer{
         
         h1{
             font-size: 72px;
+            font-weight: 800;
         }
     }
 }
